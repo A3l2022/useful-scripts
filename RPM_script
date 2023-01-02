@@ -14,4 +14,4 @@ output=$(sudo hdparm -I $disk | grep Rotation | grep --only-matching --extended-
 
 # Displaying the RPM speed of the hard disk
 
-echo "The RPM speed of the Hard disk is: $output rpm"
+echo "The RPM speed of the Hard disk is: $output"
