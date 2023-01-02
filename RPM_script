@@ -1,0 +1,17 @@
+#!/bin/bash
+# shell script to find the RPM speed of a Hard disk
+
+# storing hard disk name into variable: disk
+
+disk="/dev/sda"
+
+# finding the Rotation speed of the hard disk 
+# fetching the integer value 
+# i.e. the speed of the hard disk 
+# and saving it into another variable
+
+output=$(sudo hdparm -I $disk | grep Rotation | grep --only-matching --extended-regexp '[0-9]+' )
+
+# Displaying the RPM speed of the hard disk
+
+echo "The RPM speed of the Hard disk is: $output rpm"
